@@ -12,9 +12,46 @@ html {
   scroll-behavior: smooth;
 }
 
+/* Default site background: use high-res webp for the rest of the site */
+html, body, #root {
+  background-image: url('/salon22@2x.webp');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: #000;
+}
+
 body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  min-height: 100vh;
+}
+
+/* Home page background: use the same high-res webp as the rest of the site */
+#accueil {
+  background-image: url('/salon22@2x.webp');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 100vh;
+}
+
+/* Use fixed background on larger screens for a parallax-like effect */
+@media (min-width: 768px) {
+  /* Make background fixed globally on desktop so all sections show the same fixed background */
+  html, body, #root {
+    background-attachment: fixed;
+  }
+}
+
+/* On large desktop screens, fit the home background to width so it aligns exactly */
+@media (min-width: 1024px) {
+  /* Fit background to width and keep fixed for all sections on large desktop */
+  html, body, #root {
+    background-size: 100% auto;
+    background-position: center top;
+    background-attachment: fixed;
+  }
 }
 
 ::-webkit-scrollbar {

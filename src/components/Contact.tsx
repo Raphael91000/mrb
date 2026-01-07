@@ -7,10 +7,10 @@ const TIKTOK_LINK = 'https://www.tiktok.com/@mrbarber94';
 const GOOGLE_MAPS_LINK = 'https://www.google.com/maps/place/Mr+Barber+94+-+salon+de+coiffure/@48.8463691,2.4996562,17z/data=!3m1!4b1!4m6!3m5!1s0x47e60dbe784985fb:0x29dad2f3d5f0f7db!8m2!3d48.8463691!4d2.4996562!16s%2Fg%2F11rqv9hk3_?entry=ttu&g_ep=EgoyMDI2MDEwNC4wIKXMDSoASAFQAw%3D%3D';
 
 const contactInfo = [
-  {
+    {
     icon: <MapPin size={24} />,
     label: 'Adresse',
-    value: '178 avenue du General de Gaulle',
+    value: '178 avenue du Général de Gaulle',
     subValue: '94170 Le Perreux-sur-Marne',
     link: GOOGLE_MAPS_LINK,
   },
@@ -55,7 +55,7 @@ const socialLinks = [
 
 export default function Contact() {
   return (
-    <section id="contact" className="py-20 px-4 bg-neutral-900/50">
+    <section id="contact" className="py-20 px-4">
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">Contact</h2>
@@ -121,7 +121,7 @@ export default function Contact() {
               ))}
             </div>
 
-            <div className="mt-8 p-6 bg-neutral-800/50 rounded-2xl border border-neutral-700">
+            <div className="mt-8 p-6 bg-transparent rounded-2xl border border-neutral-800/40">
               <p className="text-neutral-300 text-center">
                 Besoin d'un renseignement ?<br />
                 <span className="text-white font-medium">Appelez-nous ou envoyez un message !</span>

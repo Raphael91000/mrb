@@ -5,15 +5,15 @@ const TIKTOK_LINK = 'https://www.tiktok.com/@mrbarber94';
 
 export default function Footer() {
   return (
-    <footer className="bg-black border-t border-neutral-800 py-12 px-4">
+    <footer className="bg-transparent border-t border-neutral-800/40 py-12 px-4">
       <div className="max-w-6xl mx-auto">
         <div className="flex flex-col md:flex-row justify-between items-center gap-8">
           <div className="text-center md:text-left">
-            <h3 className="text-2xl font-bold text-white mb-2">
-              Mr Barber <span className="text-white">94</span>
-            </h3>
+            <div className="mb-2">
+              <img src="/logoo.png" alt="Mr Barber 94" className="h-10 md:h-12 object-contain mx-auto md:mx-0" />
+            </div>
             <p className="text-neutral-500 italic">
-              "Laissez-nous faire, c'est tout simplement notre metier"
+              "Laissez-nous faire, c'est tout simplement notre métier"
             </p>
           </div>
 
@@ -55,7 +55,7 @@ export default function Footer() {
 
         <div className="mt-8 pt-8 border-t border-neutral-800 text-center">
           <p className="text-neutral-500 text-sm">
-            &copy; {new Date().getFullYear()} Mr Barber 94. Tous droits reserves.
+            &copy; {new Date().getFullYear()} Mr Barber 94. Tous droits réservés.
           </p>
         </div>
       </div>

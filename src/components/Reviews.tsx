@@ -64,7 +64,7 @@ export default function Reviews() {
           {reviews.map((review, index) => (
             <div
               key={index}
-              className="bg-neutral-900/50 backdrop-blur-sm rounded-2xl p-6 border border-neutral-800 hover:border-neutral-600 transition-all duration-300 hover:transform hover:-translate-y-1"
+              className="bg-transparent rounded-2xl p-6 border border-white transition-colors"
             >
               <div className="flex items-start justify-between mb-4">
                 <div>

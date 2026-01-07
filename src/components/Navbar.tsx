@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import { Menu, X, Phone } from 'lucide-react';
 
 const PHONE_NUMBER = '0755305100';
@@ -13,33 +13,18 @@ const navLinks = [
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
-  const [isScrolled, setIsScrolled] = useState(false);
-
-  useEffect(() => {
-    const handleScroll = () => {
-      setIsScrolled(window.scrollY > 50);
-    };
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
 
   const handleLinkClick = () => {
     setIsOpen(false);
   };
 
   return (
-    <nav
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        isScrolled ? 'bg-black/95 backdrop-blur-md shadow-lg' : 'bg-transparent'
-      }`}
-    >
+    <nav className="fixed top-0 left-0 right-0 z-50 transition-all duration-300 bg-transparent">
       <div className="max-w-6xl mx-auto px-4">
-        <div className="flex items-center justify-between h-16 md:h-20">
-          <a href="#accueil" className="text-xl md:text-2xl font-bold text-white">
-            Mr Barber <span className="text-white">94</span>
-          </a>
+        <div className="relative flex items-center justify-center h-16 md:h-20">
+          {/* brand removed to center navbar */}
 
-          <div className="hidden md:flex items-center gap-8">
+          <div className="hidden md:flex items-center gap-8 justify-center">
             {navLinks.map((link) => (
               <a
                 key={link.href}
@@ -60,7 +45,7 @@ export default function Navbar() {
 
           <button
             onClick={() => setIsOpen(!isOpen)}
-            className="md:hidden text-white p-2"
+            className="md:hidden text-white p-2 absolute right-4"
             aria-label="Toggle menu"
           >
             {isOpen ? <X size={28} /> : <Menu size={28} />}
@@ -69,8 +54,8 @@ export default function Navbar() {
       </div>
 
       <div
-        className={`md:hidden absolute top-full left-0 right-0 bg-black/95 backdrop-blur-md transition-all duration-300 overflow-hidden ${
-          isOpen ? 'max-h-96 border-t border-neutral-800' : 'max-h-0'
+        className={`md:hidden absolute top-full left-0 right-0 bg-transparent transition-all duration-300 overflow-hidden ${
+          isOpen ? 'max-h-96 border-t border-neutral-800/40' : 'max-h-0'
         }`}
       >
         <div className="px-4 py-4 space-y-4">

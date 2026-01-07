@@ -8,22 +8,22 @@ const TIKTOK_LINK = 'https://www.tiktok.com/@mrbarber94';
 export default function Hero() {
   return (
     <section className="min-h-screen flex flex-col items-center justify-center px-4 py-16 text-center relative overflow-hidden">
-      <div className="absolute inset-0 bg-black" />
+      <div className="absolute inset-0 bg-transparent" />
 
       <div className="relative z-10 max-w-4xl mx-auto">
         <div className="mb-8">
-          <h1 className="text-5xl md:text-7xl font-bold tracking-tight mb-4">
-            Mr Barber <span className="text-white">94</span>
+          <h1 className="mb-4">
+            <img src="/logoo.png" alt="Mr Barber 94" className="mx-auto h-32 md:h-48 object-contain" />
           </h1>
-          <p className="text-xl md:text-2xl text-neutral-400 italic font-light max-w-2xl mx-auto">
-            "Laissez-nous faire, c'est tout simplement notre metier"
-          </p>
+              <p className="text-xl md:text-2xl text-neutral-400 italic font-light max-w-2xl mx-auto">
+                "Laissez-nous faire, c'est tout simplement notre métier"
+              </p>
         </div>
 
         <div className="mb-12 text-neutral-400">
-          <p className="text-lg">178 avenue du General de Gaulle</p>
           <p className="text-lg">Le Perreux-sur-Marne</p>
-          <p className="text-lg mt-2 text-white font-medium">Ouvert de 10h a 20h</p>
+           <p className="text-lg">178 avenue du Général de Gaulle</p>
+           <p className="text-lg mt-2 text-white font-medium">Ouvert de 10h à 20h</p>
         </div>
 
         <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
@@ -70,11 +70,7 @@ export default function Hero() {
         </div>
       </div>
 
-      <div className="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce">
-        <div className="w-6 h-10 border-2 border-neutral-600 rounded-full flex justify-center pt-2">
-          <div className="w-1.5 h-3 bg-neutral-500 rounded-full" />
-        </div>
-      </div>
+      {/* scroll indicator removed to keep pages uniform */}
     </section>
   );
 }

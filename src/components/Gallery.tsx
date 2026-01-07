@@ -3,42 +3,21 @@ import { Calendar } from 'lucide-react';
 const TREATWELL_LINK = 'https://www.treatwell.fr/salon/mr-barber-94/';
 
 const galleryImages = [
-  {
-    url: 'https://images.pexels.com/photos/1805600/pexels-photo-1805600.jpeg?auto=compress&cs=tinysrgb&w=800',
-    alt: 'Coupe moderne homme',
-  },
-  {
-    url: 'https://images.pexels.com/photos/1570807/pexels-photo-1570807.jpeg?auto=compress&cs=tinysrgb&w=800',
-    alt: 'Coupe classique elegante',
-  },
-  {
-    url: 'https://images.pexels.com/photos/2040189/pexels-photo-2040189.jpeg?auto=compress&cs=tinysrgb&w=800',
-    alt: 'Style barbe soignee',
-  },
-  {
-    url: 'https://images.pexels.com/photos/3998421/pexels-photo-3998421.jpeg?auto=compress&cs=tinysrgb&w=800',
-    alt: 'Coupe tendance',
-  },
-  {
-    url: 'https://images.pexels.com/photos/3992874/pexels-photo-3992874.jpeg?auto=compress&cs=tinysrgb&w=800',
-    alt: 'Travail de precision',
-  },
-  {
-    url: 'https://images.pexels.com/photos/3998429/pexels-photo-3998429.jpeg?auto=compress&cs=tinysrgb&w=800',
-    alt: 'Finition parfaite',
-  },
+  { url: '/coupe1.jpeg', alt: 'Taper fade' },
+  { url: '/coupe2.jpeg', alt: 'degradé bas homme' },
+  { url: '/coupe3.jpeg', alt: 'coupe + barbe' },
 ];
 
 export default function Gallery() {
   return (
-    <section id="galerie" className="py-20 px-4 bg-neutral-900/50">
+    <section id="galerie" className="py-20 px-4">
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">Nos Realisations</h2>
-          <p className="text-neutral-400 text-lg">Decouvrez notre savoir-faire</p>
+          <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">Nos Réalisations</h2>
+          <p className="text-neutral-400 text-lg">Découvrez notre savoir-faire</p>
         </div>
 
-        <div className="grid grid-cols-2 md:grid-cols-3 gap-4 md:gap-6 mb-12">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 md:gap-6 mb-12">
           {galleryImages.map((image, index) => (
             <div
               key={index}
@@ -59,7 +38,7 @@ export default function Gallery() {
 
         <div className="text-center">
           <p className="text-2xl md:text-3xl text-white mb-8 font-light">
-            Envie du meme style ? <span className="font-semibold">Venez nous voir</span>
+            Envie du même style ? <span className="font-semibold">Venez nous voir</span>
           </p>
           <a
             href={TREATWELL_LINK}

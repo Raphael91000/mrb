@@ -56,7 +56,7 @@ interface ServiceCategoryProps {
 
 function ServiceCategory({ title, icon, items }: ServiceCategoryProps) {
   return (
-    <div className="bg-neutral-900/50 backdrop-blur-sm rounded-2xl p-6 md:p-8 border border-neutral-800 hover:border-neutral-700 transition-colors">
+    <div className="bg-transparent rounded-2xl p-6 md:p-8 border border-white transition-colors">
       <div className="flex items-center gap-3 mb-6">
         <div className="p-2 bg-white/10 rounded-lg text-white">
           {icon}
