@@ -1,81 +1,39 @@
-import { useState } from 'react';
-import { Menu, X, Phone } from 'lucide-react';
-
-const PHONE_NUMBER = '0755305100';
-
-const navLinks = [
-  { href: '#accueil', label: 'Accueil' },
-  { href: '#prestations', label: 'Prestations' },
-  { href: '#galerie', label: 'Galerie' },
-  { href: '#avis', label: 'Avis' },
-  { href: '#contact', label: 'Contact' },
-];
-
 export default function Navbar() {
-  const [isOpen, setIsOpen] = useState(false);
-
-  const handleLinkClick = () => {
-    setIsOpen(false);
-  };
+  const navLinks = [
+    { href: '#accueil', label: 'Accueil' },
+    { href: '#prestations', label: 'Prestations' },
+    { href: '#realisations', label: 'Réalisations' },
+    { href: '#avis', label: 'Avis' },
+    { href: '#contact', label: 'Contact' },
+  ];
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 transition-all duration-300 bg-transparent">
-      <div className="max-w-6xl mx-auto px-4">
-        <div className="relative flex items-center justify-center h-16 md:h-20">
-          {/* brand removed to center navbar */}
+    <nav className="fixed top-0 left-0 right-0 z-50 bg-transparent">
+      <div className="max-w-full px-4 sm:px-6 md:px-8 lg:px-16">
+        <div className="flex items-center justify-between h-16 md:h-20">
 
-          <div className="hidden md:flex items-center gap-8 justify-center">
+          {/* LOGO → ACCUEIL */}
+          <a href="#accueil" className="flex-shrink-0">
+            <img
+              src="/logoo@2x.webp"
+              alt="Mr Barber 94 Logo"
+              className="h-12 w-auto"
+            />
+          </a>
+
+          {/* DESKTOP NAV */}
+          <div className="hidden md:flex items-center space-x-8">
             {navLinks.map((link) => (
               <a
                 key={link.href}
                 href={link.href}
-                className="text-neutral-300 hover:text-white transition-colors font-medium"
+                className="text-white font-medium transition-colors hover:text-neutral-300"
               >
                 {link.label}
               </a>
             ))}
-            <a
-              href={`tel:${PHONE_NUMBER}`}
-              className="flex items-center gap-2 bg-white hover:bg-neutral-200 text-black font-semibold px-4 py-2 rounded-lg transition-colors"
-            >
-              <Phone size={18} />
-              <span>Appeler</span>
-            </a>
           </div>
 
-          <button
-            onClick={() => setIsOpen(!isOpen)}
-            className="md:hidden text-white p-2 absolute right-4"
-            aria-label="Toggle menu"
-          >
-            {isOpen ? <X size={28} /> : <Menu size={28} />}
-          </button>
-        </div>
-      </div>
-
-      <div
-        className={`md:hidden absolute top-full left-0 right-0 bg-transparent transition-all duration-300 overflow-hidden ${
-          isOpen ? 'max-h-96 border-t border-neutral-800/40' : 'max-h-0'
-        }`}
-      >
-        <div className="px-4 py-4 space-y-4">
-          {navLinks.map((link) => (
-            <a
-              key={link.href}
-              href={link.href}
-              onClick={handleLinkClick}
-              className="block text-neutral-300 hover:text-white transition-colors font-medium py-2"
-            >
-              {link.label}
-            </a>
-          ))}
-          <a
-            href={`tel:${PHONE_NUMBER}`}
-            className="flex items-center justify-center gap-2 bg-white hover:bg-neutral-200 text-black font-semibold px-4 py-3 rounded-lg transition-colors w-full"
-          >
-            <Phone size={18} />
-            <span>Appeler maintenant</span>
-          </a>
         </div>
       </div>
     </nav>

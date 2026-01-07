@@ -10,7 +10,7 @@ export default function Footer() {
         <div className="flex flex-col md:flex-row justify-between items-center gap-8">
           <div className="text-center md:text-left">
             <div className="mb-2">
-              <img src="/logoo.png" alt="Mr Barber 94" className="h-10 md:h-12 object-contain mx-auto md:mx-0" />
+              <img src="/logoo@2x.webp" alt="Mr Barber 94" className="h-10 md:h-12 object-contain mx-auto md:mx-0" />
             </div>
             <p className="text-neutral-500 italic">
               "Laissez-nous faire, c'est tout simplement notre métier"

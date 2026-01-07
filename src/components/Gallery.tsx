@@ -4,17 +4,24 @@ const TREATWELL_LINK = 'https://www.treatwell.fr/salon/mr-barber-94/';
 
 const galleryImages = [
   { url: '/coupe1.jpeg', alt: 'Taper fade' },
-  { url: '/coupe2.jpeg', alt: 'degradé bas homme' },
-  { url: '/coupe3.jpeg', alt: 'coupe + barbe' },
+  { url: '/coupe2.jpeg', alt: 'Dégradé bas homme' },
+  { url: '/coupe3.jpeg', alt: 'Coupe + barbe' },
 ];
 
 export default function Gallery() {
   return (
-    <section id="galerie" className="py-20 px-4">
+    <section
+      id="realisations"
+      className="py-20 px-4 scroll-mt-24"
+    >
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">Nos Réalisations</h2>
-          <p className="text-neutral-400 text-lg">Découvrez notre savoir-faire</p>
+          <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
+            Nos Réalisations
+          </h2>
+          <p className="text-neutral-400 text-lg">
+            Découvrez notre savoir-faire
+          </p>
         </div>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 md:gap-6 mb-12">
@@ -28,9 +35,13 @@ export default function Gallery() {
                 alt={image.alt}
                 className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
               />
+
               <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+
               <div className="absolute bottom-0 left-0 right-0 p-4 translate-y-full group-hover:translate-y-0 transition-transform duration-300">
-                <p className="text-white text-sm font-medium">{image.alt}</p>
+                <p className="text-white text-sm font-medium">
+                  {image.alt}
+                </p>
               </div>
             </div>
           ))}
@@ -38,8 +49,10 @@ export default function Gallery() {
 
         <div className="text-center">
           <p className="text-2xl md:text-3xl text-white mb-8 font-light">
-            Envie du même style ? <span className="font-semibold">Venez nous voir</span>
+            Envie du même style ?{' '}
+            <span className="font-semibold">Venez nous voir</span>
           </p>
+
           <a
             href={TREATWELL_LINK}
             target="_blank"
