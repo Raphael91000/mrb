@@ -29,9 +29,10 @@ export default function Hero() {
       <div className="relative z-10 min-h-screen flex items-center px-4 sm:px-6 md:px-8 lg:px-16 py-24">
         <div className="grid grid-cols-1 md:grid-cols-12 items-center gap-6 w-full">
 
-          {/* TEXT COLUMN */}
-          <div
-            className={`md:col-span-6 md:col-start-1 text-left text-white transition-all duration-700 ${
+          {/* TEXT COLUMN — DÉCALÉE VERS LA DROITE */}
+         <div
+  className={`md:col-span-6 md:col-start-1 md:translate-x-16 text-left text-white transition-all duration-700 ${
+
               mounted
                 ? 'opacity-100 translate-x-0'
                 : 'opacity-0 -translate-x-6'
@@ -104,7 +105,7 @@ export default function Hero() {
             </div>
           </div>
 
-          {/* IMAGE COLUMN */}
+          {/* IMAGE COLUMN — INCHANGÉE */}
           <div className="hidden md:block md:col-span-6 md:col-start-7 relative">
             <img
               src="/wahl.png"
