@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
 import { Phone, Calendar, Instagram } from 'lucide-react';
+import Navbar from './Navbar';
 
 const PHONE_NUMBER = '0755305100';
 const TREATWELL_LINK = 'https://www.treatwell.fr/salon/mr-barber-94/';
@@ -17,30 +18,37 @@ export default function Hero() {
   return (
     <section
       id="accueil"
-      className="relative min-h-screen overflow-hidden flex items-center"
+      className="relative min-h-screen overflow-hidden"
     >
-      <div className="relative z-10 w-full px-4 sm:px-6 md:px-8 lg:px-16 py-24">
-        <div className="grid grid-cols-1 md:grid-cols-12 items-center gap-6">
+      {/* NAVBAR UNIQUEMENT SUR LA HERO */}
+      <div className="absolute top-0 left-0 right-0 z-50">
+        <Navbar />
+      </div>
+
+      {/* HERO CONTENT */}
+      <div className="relative z-10 min-h-screen flex items-center px-4 sm:px-6 md:px-8 lg:px-16 py-24">
+        <div className="grid grid-cols-1 md:grid-cols-12 items-center gap-6 w-full">
 
           {/* TEXT COLUMN */}
           <div
             className={`md:col-span-6 md:col-start-1 text-left text-white transition-all duration-700 ${
-              mounted ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-6'
+              mounted
+                ? 'opacity-100 translate-x-0'
+                : 'opacity-0 -translate-x-6'
             }`}
           >
-            <h1 className="text-6xl font-bold uppercase text-white mb-4 font-mono">
+            <h1 className="text-6xl md:text-7xl font-bold uppercase text-white mb-4 font-mono">
               Mr Barber 94
             </h1>
 
             <p className="mt-4 text-neutral-300 text-lg md:text-xl italic max-w-lg leading-relaxed">
-  <span className="block">
-    Laissez-nous faire, c&apos;est tout simplement
-  </span>
-  <span className="block">
-    notre métier
-  </span>
-</p>
-
+              <span className="block">
+                Laissez-nous faire, c&apos;est tout simplement
+              </span>
+              <span className="block text-white font-medium">
+                notre métier
+              </span>
+            </p>
 
             <div className="mt-6 text-neutral-400 text-sm max-w-md opacity-80">
               <p>178 avenue du Général de Gaulle — Le Perreux-sur-Marne</p>
@@ -97,27 +105,26 @@ export default function Hero() {
           </div>
 
           {/* IMAGE COLUMN */}
-<div className="hidden md:block md:col-span-6 md:col-start-7 relative">
-  <img
-    src="/wahl.png"
-    alt=""
-    aria-hidden="true"
-    className="
-      absolute
-      right-[-4rem]
-      bottom-[-22rem]
-      w-[38rem]
-      max-w-none
-      opacity-95
-      pointer-events-none
-    "
-    style={{
-      maskImage: 'linear-gradient(to left, black 75%, transparent)',
-    }}
-  />
-</div>
-
-
+          <div className="hidden md:block md:col-span-6 md:col-start-7 relative">
+            <img
+              src="/wahl.png"
+              alt=""
+              aria-hidden="true"
+              className="
+                absolute
+                right-[-4rem]
+                bottom-[-22rem]
+                w-[38rem]
+                max-w-none
+                opacity-95
+                pointer-events-none
+              "
+              style={{
+                maskImage:
+                  'linear-gradient(to left, black 75%, transparent)',
+              }}
+            />
+          </div>
 
         </div>
       </div>
