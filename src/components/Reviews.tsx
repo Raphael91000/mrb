@@ -7,7 +7,8 @@ import {
 } from 'lucide-react';
 
 const GOOGLE_MAPS_LINK =
-  'https://www.google.com/maps/place/Mr+Barber+94';
+  'https://www.google.com/maps/place/Mr+Barber+94+-+salon+de+coiffure/@48.8463691,2.4996562,17z/data=!4m8!3m7!1s0x47e60dbe784985fb:0x29dad2f3d5f0f7db!8m2!3d48.8463691!4d2.4996562!9m1!1b1!16s%2Fg%2F11rqv9hk3_?entry=ttu';
+
 
 const reviews = [
   {

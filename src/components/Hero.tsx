@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { Phone, Calendar, Instagram } from 'lucide-react';
+import { Phone, Calendar, Instagram, Star } from 'lucide-react';
 import Navbar from './Navbar';
 
 const PHONE_NUMBER = '0755305100';
@@ -29,16 +29,16 @@ export default function Hero() {
       <div className="relative z-10 min-h-screen flex items-center px-4 sm:px-6 md:px-8 lg:px-16 py-24">
         <div className="grid grid-cols-1 md:grid-cols-12 items-center gap-6 w-full">
 
-          {/* TEXT COLUMN — DÉCALÉE VERS LA DROITE */}
-         <div
-  className={`md:col-span-6 md:col-start-1 md:translate-x-16 text-left text-white transition-all duration-700 ${
-
+          {/* TEXT COLUMN */}
+          <div
+            className={`md:col-span-6 md:col-start-1 md:translate-x-16 text-left text-white transition-all duration-700 ${
               mounted
                 ? 'opacity-100 translate-x-0'
                 : 'opacity-0 -translate-x-6'
             }`}
           >
-            <h1 className="text-6xl md:text-7xl font-bold uppercase text-white mb-4 font-mono">
+            {/* 🔽 MODIFICATION MOBILE ICI */}
+            <h1 className="text-5xl sm:text-6xl md:text-7xl font-bold uppercase text-white mb-4 font-mono whitespace-nowrap sm:whitespace-normal">
               Mr Barber 94
             </h1>
 
